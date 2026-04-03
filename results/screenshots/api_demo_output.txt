@@ -1,0 +1,121 @@
+======================================================================
+REHAB ADVISORY API - SMS/USSD Integration Demo
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+Scenario 1: New center opening - many patients waiting
+Center: Kigali Rehab Center
+──────────────────────────────────────────────────────────────────────
+{
+  "status": "success",
+  "center": "Kigali Rehab Center",
+  "recommended_action": "Assess Patient",
+  "action_id": 1,
+  "confidence": 0.85,
+  "advice_en": "Assess the next patient in the waiting queue to determine their needs.",
+  "advice_rw": "Suzuma umurwayi ukurikira mu murongo w'abaretse.",
+  "alerts": [],
+  "action_probabilities": {},
+  "sms_message": "UBUFASHA BW'IKORANABUHANGA:\nSuzuma umurwayi ukurikira mu murongo w'abaretse.",
+  "center_input": {
+    "center": "Kigali Rehab Center",
+    "center_type": "urban",
+    "day_of_period": 10,
+    "patients_waiting": 8,
+    "patients_in_rehab": 2,
+    "wheelchair_stock": 6,
+    "prosthetic_stock": 4,
+    "hearing_aid_stock": 5,
+    "therapist_availability": 3,
+    "avg_patient_progress": 0.2,
+    "community_impact": 10,
+    "budget_remaining": 180,
+    "device_condition": 0.9,
+    "patient_satisfaction": 0.85,
+    "referral_backlog": 1,
+    "days_since_maintenance": 3,
+    "current_disability": "mobility",
+    "urgency_level": 0.7
+  },
+  "scenario": "New center opening - many patients waiting"
+}
+
+──────────────────────────────────────────────────────────────────────
+Scenario 2: Crisis - low resources, high demand
+Center: Huye District Outreach
+──────────────────────────────────────────────────────────────────────
+{
+  "status": "success",
+  "center": "Huye District Outreach",
+  "recommended_action": "Assess Patient",
+  "action_id": 1,
+  "confidence": 0.85,
+  "advice_en": "Assess the next patient in the waiting queue to determine their needs.",
+  "advice_rw": "Suzuma umurwayi ukurikira mu murongo w'abaretse.",
+  "alerts": [
+    "HIGH QUEUE: Many patients waiting for assessment.",
+    "DEVICE ALERT: Devices need urgent maintenance."
+  ],
+  "action_probabilities": {},
+  "sms_message": "UBUFASHA BW'IKORANABUHANGA:\nSuzuma umurwayi ukurikira mu murongo w'abaretse.\n! HIGH QUEUE: Many patients waiting for assessment.",
+  "center_input": {
+    "center": "Huye District Outreach",
+    "center_type": "rural",
+    "day_of_period": 45,
+    "patients_waiting": 12,
+    "patients_in_rehab": 5,
+    "wheelchair_stock": 2,
+    "prosthetic_stock": 1,
+    "hearing_aid_stock": 3,
+    "therapist_availability": 1,
+    "avg_patient_progress": 0.55,
+    "community_impact": 40,
+    "budget_remaining": 60,
+    "device_condition": 0.25,
+    "patient_satisfaction": 0.45,
+    "referral_backlog": 6,
+    "days_since_maintenance": 12,
+    "current_disability": "amputation",
+    "urgency_level": 0.9
+  },
+  "scenario": "Crisis - low resources, high demand"
+}
+
+──────────────────────────────────────────────────────────────────────
+Scenario 3: Late stage - high progress, nearing discharge
+Center: Musanze Rehab Center
+──────────────────────────────────────────────────────────────────────
+{
+  "status": "success",
+  "center": "Musanze Rehab Center",
+  "recommended_action": "Discharge Patient",
+  "action_id": 7,
+  "confidence": 0.85,
+  "advice_en": "Discharge the most progressed patient with independence support plan.",
+  "advice_rw": "Sezera umurwayi wamaze gukira amufashe gushinga ubuzima bushya.",
+  "alerts": [],
+  "action_probabilities": {},
+  "sms_message": "UBUFASHA BW'IKORANABUHANGA:\nSezera umurwayi wamaze gukira amufashe gushinga ubuzima bushya.",
+  "center_input": {
+    "center": "Musanze Rehab Center",
+    "center_type": "urban",
+    "day_of_period": 80,
+    "patients_waiting": 2,
+    "patients_in_rehab": 3,
+    "wheelchair_stock": 1,
+    "prosthetic_stock": 0,
+    "hearing_aid_stock": 2,
+    "therapist_availability": 4,
+    "avg_patient_progress": 0.82,
+    "community_impact": 75,
+    "budget_remaining": 35,
+    "device_condition": 0.65,
+    "patient_satisfaction": 0.9,
+    "referral_backlog": 0,
+    "days_since_maintenance": 7,
+    "current_disability": "hearing",
+    "urgency_level": 0.4
+  },
+  "scenario": "Late stage - high progress, nearing discharge"
+}
+
